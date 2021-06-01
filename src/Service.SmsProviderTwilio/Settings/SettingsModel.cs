@@ -17,7 +17,7 @@ namespace Service.SmsProviderTwilio.Settings
         [YamlProperty("SmsProviderTwilio.TwilioAuthToken")]
         public string TwilioAuthToken { get; set; }
 
-        [YamlProperty("SmsProviderNexmo.SenderCompanyPhone")]
+        [YamlProperty("SmsProviderTwilio.SenderCompanyPhone")]
         public string SenderCompanyPhone { get; set; }
 
         [YamlProperty("SmsProviderTwilio.ElkLogs")]
