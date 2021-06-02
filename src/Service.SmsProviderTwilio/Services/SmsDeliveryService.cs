@@ -52,9 +52,8 @@ namespace Service.SmsProviderTwilio.Services
                 return Task.FromResult(new SendSmsResponse { Status = false, ErrorMessage = "Sms sending failed" });
             }
 
-            var smsId = Guid.NewGuid().ToString();
-            _logger.LogInformation("Sms with ID {smsId} sent successfully.", smsId);
-            return Task.FromResult(new SendSmsResponse { Status = true, ReturnedId = smsId });
+            _logger.LogInformation("Sms sent successfully");
+            return Task.FromResult(new SendSmsResponse { Status = true });
         }
     }
 }
