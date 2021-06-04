@@ -24,8 +24,8 @@ namespace Service.SmsProviderTwilio.Services
 
         public Task<SendSmsResponse> SendSmsAsync(SendSmsRequest request)
         {
-            var accountSid = Environment.GetEnvironmentVariable(_settingsModel.TwilioAccountSid);
-            var authToken = Environment.GetEnvironmentVariable(_settingsModel.TwilioAuthToken);
+            var accountSid = _settingsModel.TwilioAccountSid;
+            var authToken = _settingsModel.TwilioAuthToken;
 
             TwilioClient.Init(accountSid, authToken);
 
